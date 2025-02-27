@@ -20,12 +20,12 @@ If you do not have a Feide account follow these instructions:
 
   - Now you have FEIDE **guest** account.
 
-Joining eScience2024 Feide group:
+Joining eScience2025 Feide group:
 ---------------------------------
 
 Once you created a FEIDE account (or if you already have one):
 
-  - You might have already received the invitation to a FEIDE group eScience2024 by email. If not, send email to Matvey Debolskiy <matveyd@uio.no>.
+  - You might have already received the invitation to a FEIDE group eScience2025 by email. If not, send email to Matvey Debolskiy <matveyd@uio.no>.
 
   - Click on the link in the email. You will be suggested to login in into dataporten.
  
@@ -37,13 +37,13 @@ Once you created a FEIDE account (or if you already have one):
       - Click ``Can't find your user account?``
       - Choose ``Feide guest users``, you would be promted to the OpenIdP login page.
 
-  - Accept policies and become member of **eScience2024** Feide group
+  - Accept policies and become member of **eScience2025** Feide group
 
 
 Accessing Jupyterhub:
 ---------------------
 
-Once you've become a memeber of **escience2024** Feide group you can use Jupyterhub for eScience2024 cource at `<https://escience2024.craas1.sigma2.no>`_.
+Once you've become a memeber of **escience2025** Feide group you can use Jupyterhub for eScience2025 cource at `<https://escience2025.craas1.sigma2.no>`_.
 
 
 
@@ -60,6 +60,6 @@ Once you've become a memeber of **escience2024** Feide group you can use Jupyter
 
 .. warning:: **Test server access**
 
-  Though `test sever <https://escience2024-test.craas1.sigma2.no>`_ is still reachable but will be shutdown soon.
-  So if you have anything there, move it to escience2024 server. If you  need help ask **@mvdeoblskiy**.
+  Though `test sever <https://escience2025-test.craas1.sigma2.no>`_ is still reachable but will be shutdown soon.
+  So if you have anything there, move it to escience2025 server. If you  need help ask **@mvdeoblskiy**.
 

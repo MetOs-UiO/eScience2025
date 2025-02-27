@@ -23,11 +23,11 @@ sys.path.insert(0, os.path.abspath("."))
 
 # -- Project information -----------------------------------------------------
 
-project = "eScience-2024"
-copyright = "2024, MetOs, UiO"
+project = "eScience-2025"
+copyright = "2025, MetOs, UiO"
 author = "MetOs-UiO"
 github_user = "MetOs-UiO"
-github_repo_name = "eScience2024"  # auto-detected from dirname if blank
+github_repo_name = "eScience2025"  # auto-detected from dirname if blank
 github_version = "master"
 conf_py_path = "/docs/"  # with leading and trailing slash
 
@@ -108,7 +108,7 @@ html_context = {
     "conf_py_path": conf_py_path,
 }
 html_theme_options = {
-    "repository_url": "https://github.com/MetOs-UiO/eScience2024",
+    "repository_url": "https://github.com/MetOs-UiO/eScience2025",
     "use_repository_button": True,
     "use_issues_button": True,
     "use_edit_page_button": True,

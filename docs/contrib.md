@@ -4,7 +4,7 @@
 
 ## The recommended workflow for development
 1. Fork the repository to your Github account and fetch upstream to receive the newest commits.
-2. Alternatively, you should just clone this repo if you are part of the **eScience2024** team, this way the branches you create will get 
+2. Alternatively, you should just clone this repo if you are part of the **eScience2025** team, this way the branches you create will get 
 3. Perform the development in a newly-created branch (other than `master`) in your repository. 
 4. Note that since we are using `myst-parser` both `.rst` and `.md` can be used.
 5. Build the page in the command line to test the introduced modifications by following the instructions below.

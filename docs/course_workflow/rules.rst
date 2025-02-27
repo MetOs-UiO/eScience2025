@@ -3,7 +3,7 @@ Basic Rules for the course
 
 
 
-  #. Write your scripts/notebooks into the clone of your eScience2024-projects fork.
+  #. Write your scripts/notebooks into the clone of your eScience2025-projects fork.
   #. Work in your ``Group#`` subfolder in the clone (or even a subsubfolder for your work, one level deeper) to reduce number of potential conflicts when merging.
   #. If there are files that are automatically created in that folder that should not be tracked, update `.gitignore`
   #. Do not store data in that folder unless it is \< 10 Mb. See :doc:`Sharing Data <./data>`.

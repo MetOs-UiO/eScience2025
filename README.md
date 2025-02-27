@@ -1,3 +1,3 @@
 # Documentation link:
 
-[eScience2024.github.io](https://metos-uio.github.io/eScience2024/)
+[eScience2025.github.io](https://metos-uio.github.io/eScience2025/)

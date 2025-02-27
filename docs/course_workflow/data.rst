@@ -1,7 +1,7 @@
 Sharing data
 ============
 
-Small size data (\<10 Mb) can be shared directly through the `eScience2024-projects repo <https://github.com/MetOs-UiO/eScience2024-projects>`_.
+Small size data (\<10 Mb) can be shared directly through the `eScience2025-projects repo <https://github.com/MetOs-UiO/eScience2025-projects>`_.
 
 Larger data will be put into read-only ``~/shared-craas1-nn9989k-geo4992/data/`` by request (ask @mvdebolsiy to copy it there).
 
