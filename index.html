@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>eScience 2025 course &#8212; eScience-2025  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-toolbox.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_toolbox_installation.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/sphinx_toolbox_installation.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="icon" href="_static/es-logo.ico"/>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Jupyterhub access" href="feide/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/es-logo.png" class="logo__image only-light" alt="eScience-2025  documentation - Home"/>
+    <script>document.write(`<img src="_static/es-logo.png" class="logo__image only-dark" alt="eScience-2025  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    eScience 2025 course
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="feide/">Jupyterhub access</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="course_workflow/">Workflow for eScience2025 course</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/workflow/">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/rules/">Basic Rules for the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/data/">Sharing data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="basics/">Jupyterhub basic usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/start_stop/">Starting and stopping your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/lab/">The JupyterLab Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/kernels/">Using different kernels in notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/settings/">JupyterLab settings</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="data/">Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/Intake-data-acess/">Acessing model data using intake-esm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/local-data/">Local shared data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/ACTRIS-data/">ACTRIS data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="learning/">Learning Corner</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/dask_intro/">Brief introduction to Dask</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/from_ebas_using_xarray/">Using xarray to read EBAS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/">Interpolate hybrid sigma pressure coordinates to pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/">Making a nice table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/mask_land/">Mask land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/">Using masks and computing weighted average</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/projections/">Using cartopy and projections for plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/read_PPE/">Read CMIP-PPE data and emulate with Gaussian Processor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/">Some tips with xarray and pandas</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/xesmf_regridding/">Regridding model data with xESMF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/us-links/">Useful links</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git_integration/">Using version control on Jupyterhub:</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/git_jlab/">Starting with git on the jupyterhub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/remotes/">Setting up remotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/github-work/">Pull requests and Issues</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="contrib/">Contribute to this page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license/">Credit</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/edit/master/docs/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>eScience 2025 course</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="escience-2025-course">
+<h1>eScience 2025 course<a class="headerlink" href="#escience-2025-course" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feide/">Jupyterhub access</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feide/#creating-feide-openidp-account">Creating Feide OpenIdP account:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feide/#joining-escience2025-feide-group">Joining eScience2025 Feide group:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feide/#accessing-jupyterhub">Accessing Jupyterhub:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="course_workflow/">Workflow for eScience2025 course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/workflow/">Basic setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="course_workflow/workflow/#fork-projects-repository">1. Fork projects repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="course_workflow/workflow/#get-gitgub-access-token">2. Get GitGub Access token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="course_workflow/workflow/#setup-git-and-clone-on-jupyterhub">3. Setup git and clone on jupyterhub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="course_workflow/workflow/#sharing-your-work-within-the-group">4. Sharing your work within the group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/rules/">Basic Rules for the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course_workflow/data/">Sharing data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basics/">Jupyterhub basic usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/start_stop/">Starting and stopping your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/lab/">The JupyterLab Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="basics/lab/#menu-bar">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/lab/#left-sidebar">Left Sidebar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/lab/#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/lab/#create-a-new-python-3-notebook">Create a new python 3 notebook</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/lab/#using-debugger">Using debugger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basics/kernels/">Using different kernels in notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="basics/kernels/#available-kernels">Available kernels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/kernels/#using-the-conda-environments-outside-of-the-course">Using the conda environments outside of the course</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basics/settings/">JupyterLab settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/settings/#styling-warnings-in-notebooks">Styling warnings in notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data/">Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/Intake-data-acess/">Acessing model data using intake-esm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data/Intake-data-acess/#reading-and-browsing-the-catalog">Reading and browsing the catalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data/Intake-data-acess/#browsing-the-catalog-comparing-the-change-in-aod-over-the-historical-period-across-cmip6-models">Browsing the catalog: Comparing the change in AOD over the historical period across CMIP6 models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data/Intake-data-acess/#loading-the-data-and-plotting">Loading the data and plotting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data/Intake-data-acess/#exporting-a-subset-of-the-catalog">Exporting a subset of the catalog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data/local-data/">Local shared data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data/local-data/#direct-local-data-access">Direct local data access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data/ACTRIS-data/">ACTRIS data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data/ACTRIS-data/#access-via-thredds-server-from-nilu">Access via thredds server from NILU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data/ACTRIS-data/#check-availability-via-ebas-web-interface">Check availability via EBAS web interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="learning/">Learning Corner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/dask_intro/">Brief introduction to Dask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/dask_intro/#xarray-dask">Xarray + Dask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/dask_intro/#working-with-chunks">Working with chunks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/dask_intro/#accessing-the-dask-array">Accessing the dask array</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/dask_intro/#numba">Numba</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/from_ebas_using_xarray/">Using xarray to read EBAS data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/from_ebas_using_xarray/#example-2-aerosol-sulphate-data">Example 2 aerosol sulphate data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/">Interpolate hybrid sigma pressure coordinates to pressure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/#open-cmip6-online-catalog">Open CMIP6 online catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/#search-corresponding-data">Search corresponding data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/interpolate_hybridsigma2pressure_coords/#sub-select-time-period-to-make-calculations-faster">Sub select time period (to make calculations faster):</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/">Making a nice table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/#simplify-keys">simplify keys:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/#compute-global-mean-replace-by-whatever-you-want-to-calculate">Compute global mean (replace by whatever you want to calculate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/making_a_nice_table_for_michael/#extract-units">Extract units</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/mask_land/">Mask land</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/mask_land/#reading-data-cmip-ppe">Reading data (CMIP-PPE)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/mask_land/#open-the-overview-over-the-parameters-in-the-cam6-cesm-ppe">Open the overview over the parameters in the CAM6 CESM PPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/mask_land/#change-longitude-to-180-to-180">Change longitude to -180 to 180</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/mask_land/#open-shapefile">Open shapefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/mask_land/#alternative-using-a-gridded-land-sea-dataset">Alternative using a gridded land sea dataset:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/mask_land/#interpolate-to-grid">Interpolate to grid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/">Using masks and computing weighted average</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#import-python-packages">Import python packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#search-data">Search data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#compute-weighted-mean">Compute weighted mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#compute-weighted-average-over-the-entire-globe">Compute weighted average over the entire globe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#comparison-with-unweighted-mean">Comparison with unweighted mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/masked_and_weighted_average/#compute-weigted-arctic-average">Compute Weigted arctic average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/projections/">Using cartopy and projections for plotting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/projections/#open-era5-dataset">Open ERA5 dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/projections/#reading-and-browsing-the-catalog">Reading and browsing the catalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/projections/#browsing-the-catalog-compering-the-change-in-aod-over-the-historical-period-across-cmip6-models">Browsing the catalog: Compering the change in AOD over the historical period across CMIP6 models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/projections/#get-metadata">Get metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/projections/#get-variable-metadata-air-temperature-at-2-metres">Get variable metadata (air_temperature_at_2_metres)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/projections/#select-time">Select time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/projections/#visualize-data">Visualize data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/projections/#simple-visualization-from-xarray-plotting-method">Simple visualization from xarray plotting method</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/projections/#same-plot-but-with-local-file">Same plot but with local file</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/projections/#customize-plot">Customize plot</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/projections/#set-the-size-of-the-figure-and-add-coastlines">Set the size of the figure and add coastlines</a></li>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/projections/#change-plotting-projection">Change plotting projection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/projections/#choose-extent-of-values">Choose extent of values</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/projections/#combine-plots-with-different-projections">Combine plots with different projections</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/read_PPE/">Read CMIP-PPE data and emulate with Gaussian Processor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/read_PPE/#open-the-overview-over-the-parameters-in-the-cam6-cesm-ppe">Open the overview over the parameters in the CAM6 CESM PPE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/read_PPE/#open-cmip6-online-catalog">Open CMIP6 online catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/read_PPE/#search-corresponding-data">Search corresponding data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/read_PPE/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/read_PPE/#global-mean-gp-model">Global mean GP Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/read_PPE/#calibrate">Calibrate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/">Some tips with xarray and pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#what-are-pandas-and-xarray">What are pandas and xarray?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#pandas">Pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#xarray">Xarray</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#read-in-cmip6-data-we-will-skip-this-next-part-but-you-can-check-it-later-to-read-data">1. Read in CMIP6 data: We will skip this next part, but you can check it later to read data:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#import-python-packages">Import python packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#search-corresponding-data">Search corresponding data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#reading-in-the-data-from-file">1.1 Reading in the data from file:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#open-dataset">Open dataset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#opening-multiple-files">Opening multiple files:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#check-how-your-dataset-looks">2. Check how your dataset looks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#different-types-of-information-data">Different types of information/data:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#sometimes-we-want-to-do-some-nice-tweaks-before-we-start">3. Sometimes we want to do some nice tweaks before we start:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#selecting-data-and-super-quick-plotting">Selecting data and super quick plotting:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#see-here-for-nice-overview">See here for nice overview</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#slice-in-time-the-sel-method">Slice in time: the sel method</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#isel-sel-index-selecting">isel, sel: index selecting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#calculates-variables-and-assign-attributes">3.2 Calculates variables and assign attributes!</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#convert-longitude">3.3 Convert longitude:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#the-easiest-interpolation-select-with-nearest-neighboor">4. The easiest interpolation: select with ‘nearest’ neighboor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#super-quick-averaging-etc">Super quick averaging etc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#mask-data-and-groupby-pick-out-seasons">5. Mask data and groupby: pick out seasons</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#tip-might-want-to-load-or-compute">Tip: Might want to load or compute.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#controle-the-plot-visuals">6. Controle the plot visuals:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#plotting-with-cartopy">7. Plotting with cartopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#my-headline">My headline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#comment-number-two">comment number two</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#global-average-weighted-means">8. Global average: weighted means!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#convert-to-pandas-do-some-random-fun-stuff">9. Convert to pandas &amp; do some random fun stuff:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#other-stuff">10 Other stuff</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#pick-out-station">Pick out station:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#resample">Resample:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#obs-might-want-to-convert-to-pandas">Obs: might want to convert to pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#lets-do-something-unnecesarily-complicated-d">lets do something unnecesarily complicated :D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#convert-to-pandas-dataframe">Convert to pandas dataframe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#qcut-cut">qcut, cut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#convert-back-to-xarray-if-we-need">Convert back to xarray if we need:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#mask-by-category">mask by category</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/some-xarray-pandas-presentation_Sara/#improve-and-reduce-risk-of-typo">Improve and reduce risk of typo:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/notebooks/xesmf_regridding/">Regridding model data with xESMF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#import-python-packages">Import python packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#set-path-to-save-data">Set path to save data:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#open-cmip6-online-catalog">Open CMIP6 online catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#get-data-in-xarray">Get data in xarray</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#search-od550aer-variable-dataset">Search od550aer variable dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#create-dictionary-from-the-list-of-datasets-we-found">Create dictionary from the list of datasets we found</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#select-model-and-visualize-a-single-date">Select model and visualize a single date</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#plot-on-northpolarstereo-and-set-the-latitude-limit">Plot on NorthPolarStereo and set the latitude limit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#get-attributes-unique-identifier">Get attributes (unique identifier)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#regrid-cmip6-data-to-common-noresm2-lm-grid">Regrid CMIP6 data to common NorESM2-LM grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#save-regridded-data-intermediately">Save regridded data intermediately</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#concatenate-all-models">Concatenate all models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#compute-seasonal-mean-of-all-regridded-models">Compute seasonal mean of all regridded models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#save-seasonal-mean-in-a-new-netcdf-file">Save seasonal mean in a new netCDF file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/notebooks/xesmf_regridding/#visualize-final-results-seasonal-mean-for-all-models">Visualize final results (seasonal mean for all models)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/us-links/">Useful links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning/us-links/#some-useful-links">Some useful links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/us-links/#cmip6-links">CMIP6 links:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning/us-links/#documentation-links">Documentation links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning/us-links/#previous-escience-courses">Previous eScience Courses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git_integration/">Using version control on Jupyterhub:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/git_jlab/">Starting with git on the jupyterhub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/git_jlab/#adding-your-git-username-and-email">Adding your git username and email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/git_jlab/#using-git-gui-extension">Using git GUI extension:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/git_jlab/#using-git-cli">Using git CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/remotes/">Setting up remotes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/remotes/#adding-remotes">Adding remotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/remotes/#checking-out-remote-branches">Checking out remote branches</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/github-work/">Pull requests and Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_integration/github-work/#issues">Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git_integration/github-work/#pull-requests">Pull requests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contrib/">Contribute to this page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contrib/#the-recommended-workflow-for-development">The recommended workflow for development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contrib/#locally-build-this-page">Locally build this page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contrib/#after-you-are-done-with-your-changes">After you are done with your changes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib/#reviewing-prs">Reviewing PRs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license/">Credit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license/#sponsors">Sponsors:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="feide/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Jupyterhub access</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MetOs-UiO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, MetOs, UiO.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
