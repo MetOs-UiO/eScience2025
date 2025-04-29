@@ -44,7 +44,9 @@ Once you created a FEIDE account (or if you already have one):
     .. image:: ./img/feide_pi.png
        :height: 200
 
-  - Send email to Matvey Debolskiy <matveyd@uio.no>.
+  - Send email with this info to Matvey Debolskiy <matveyd@uio.no>.
+
+  - You will shortly receive an invite to a feide group `eScience2025` (if you can't find it, look in spam)
 
   - Click on the link in the email. You will be suggested to login in into dataporten.
  
