@@ -23,19 +23,34 @@ If you do not have a Feide account follow these instructions:
 Joining eScience2025 Feide group:
 ---------------------------------
 
-Once you created a FEIDE account (or if you already have one):
+  .. note::
 
-  - You might have already received the invitation to a FEIDE group eScience2025 by email. If not, send email to Matvey Debolskiy <matveyd@uio.no>.
+     For those with FEIDE guest accounts to login:
+      - Click ``Can't find your user account?``
+      - Choose ``Feide guest users``, you would be promted to the OpenIdP login page.
+
+      .. image:: ./img/user_cant.png
+          :width: 50 %
+      .. image:: ./img/user_guest.png
+          :width: 50 %
+
+Once you created a FEIDE account (or if you already have one):
+  - Go to `Innsyn Feide <https://innsyn.feide.no/login>`_.
+  - Login in with FEIDE OpenID credentials
+  - Go to `Personal information`
+  - Uncollapse
+  - Find your `Person's principal name at home organization` or `Mail`
+
+    .. image:: ./img/feide_pi.png
+       :height: 200
+
+  - Send email to Matvey Debolskiy <matveyd@uio.no>.
 
   - Click on the link in the email. You will be suggested to login in into dataporten.
  
   - Login using your FEIDE account 
 
-  .. note::
 
-     For those with FEIDE guest accounts:
-      - Click ``Can't find your user account?``
-      - Choose ``Feide guest users``, you would be promted to the OpenIdP login page.
 
   - Accept policies and become member of **eScience2025** Feide group
 
