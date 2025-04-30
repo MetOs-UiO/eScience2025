@@ -60,7 +60,7 @@ Once you created a FEIDE account (or if you already have one):
 Accessing Jupyterhub:
 ---------------------
 
-Once you've become a memeber of **escience2025** Feide group you can use Jupyterhub for eScience2025 cource at `<https://escience2025.craas1.sigma2.no>`_.
+Once you've become a memeber of **escience2025** Feide group you can use Jupyterhub for eScience2025 cource at `<https://escience2025.craas2.sigma2.no>`_.
 
 
 
@@ -77,6 +77,6 @@ Once you've become a memeber of **escience2025** Feide group you can use Jupyter
 
 .. warning:: **Test server access**
 
-  Though `test sever <https://escience2025-test.craas1.sigma2.no>`_ is still reachable but will be shutdown soon.
+  Though `test sever <https://test-escience2025.craas2.sigma2.no>`_ is still reachable but will be shutdown soon.
   So if you have anything there, move it to escience2025 server. If you  need help ask **@mvdeoblskiy**.
 
