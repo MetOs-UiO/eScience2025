@@ -66,6 +66,7 @@ There, you would need to clone your fork and create your first branch you would 
     cd eScience2025-projects
 
 - Add upstream repository (See :doc:`Setting up remotes <../git_integration/remotes>`):
+     - to check if it's already added do ``git remote -v``
 
   .. code-block:: bash
 
@@ -85,7 +86,7 @@ There, you would need to clone your fork and create your first branch you would 
 4. Sharing your work within the group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Within your fork, you should put all your code in your ``Group#`` folder.
+Within your fork, you should put all your code in your ``group#`` folder.
 
 When you need to share your work with the others within your group you need to make a :doc:`Pull Request <../git_integration/github-work>` to the `upstream repo <https://github.com/MetOs-UiO/eScience2025-projects>`_ ``main`` branch.
 

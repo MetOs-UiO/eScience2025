@@ -3,7 +3,7 @@ Pull requests and Issues
 
 
 Issues
-======
+------
 
 Let's say you have found a bug in the code or want to request propose some new functionality for a code that is in some repo on GitHub.
 A good way to do it is to use Issues to keep the track record.
