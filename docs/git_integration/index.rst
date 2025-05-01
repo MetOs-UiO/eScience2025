@@ -7,3 +7,4 @@ Using version control on Jupyterhub:
    git_jlab
    remotes
    github-work
+   conflicts

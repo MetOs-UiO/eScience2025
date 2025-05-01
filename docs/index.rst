@@ -8,7 +8,7 @@ eScience 2025 course
    course_workflow/index
    basics/index
    data/index
-   learning/index
    git_integration/index
+   learning/index
    contrib
    license
