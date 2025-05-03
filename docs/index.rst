@@ -9,6 +9,7 @@ eScience 2025 course
    basics/index
    data/index
    git_integration/index
+   common/index
    learning/index
    contrib
    license

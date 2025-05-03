@@ -45,7 +45,7 @@ There, you would need to clone your fork and create your first branch you would 
   If you have already accessed `test sever <https://test-escience2025.craas2.sigma2.no>`_, you should move to `<https://escience2025.craas2.sigma2.no>`_. 
   Test server is only there for testing and will get shutdown.
 
-- Open terminal through Launcher.
+- :doc:`Open terminal <../common/terminal>`.
 - Type this commands filling in your **github** username and email (without ``<>``):
 
   .. code-block:: bash
