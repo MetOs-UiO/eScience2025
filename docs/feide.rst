@@ -44,6 +44,11 @@ Once you created a FEIDE account (or if you already have one):
     .. image:: ./img/feide_pi.png
        :height: 200
 
+  - If you use OpenID, your personal page will look like, just send what is in the `Mail` and `User ID`:
+
+    .. image:: ./img/openid.png
+       :height: 200
+
   - Send email with this info to Matvey Debolskiy <matveyd@uio.no>.
 
   - You will shortly receive an invite to a feide group `eScience2025` (if you can't find it, look in spam)
