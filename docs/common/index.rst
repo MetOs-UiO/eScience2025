@@ -6,3 +6,5 @@ General tips
    :maxdepth: 1
 
    terminal
+   resources
+   debug
