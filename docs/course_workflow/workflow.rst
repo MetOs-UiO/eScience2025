@@ -82,6 +82,21 @@ There, you would need to clone your fork and create your first branch you would 
     git push origin <sensible-branch-name>
 
 
+.. note:: 
+    If you do not wish to type your token to authenticate every time you fetch/pull/push:
+
+    .. code-block:: bash
+
+          # activate pangeo-notebook conda environment
+          source activate pangeo-notebook
+          # pipe your token into github login command
+          echo "<your-token-here>"  | gh auth login --with-token
+          # check if you are logged in
+          gh auth status
+
+    This login is only valid in the terminal you are in right now. 
+    If you switch terminal/restart your instance, you have to activate environment and login again.
+
 
 4. Sharing your work within the group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -110,3 +110,18 @@ Once you've made commits, you want to push them to the remote repository:
   git push
 
 To pull changes from the remote to your local repo use ``git pull``. To get updated history (branches, tags etc) from the remote use ``git fetch -a``.
+
+.. note:: 
+    If you do not wish to type your token to authenticate every time you fetch/pull/push:
+
+    .. code-block:: bash
+
+          # activate pangeo-notebook conda environment
+          source activate pangeo-notebook
+          # pipe your token into github login command
+          echo "<your-token-here>"  | gh auth login --with-token
+          # check if you are logged in
+          gh auth status
+
+    This login is only valid in the terminal you are in right now. 
+    If you switch terminal/restart your instance, you have to activate environment and login again.
