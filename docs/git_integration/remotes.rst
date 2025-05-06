@@ -27,7 +27,7 @@ Assuming you have cloned your fork and are currently in the folder that contains
 Now, you have successfully added the upstream remote to your clone.
 
 .. note::
-  If you are using GUI, in the git tab when you click on branches, you will see branches from all the remotes you've in your clone ``remote-name/branch-name`` your locacl branches will not have ``remote-name/`` prefix.
+  If you are using GUI, in the git tab when you click on branches, you will see branches from all the remotes you've in your clone ``remote-name/branch-name`` your local branches will not have ``remote-name/`` prefix.
 
 .. note::
 
@@ -44,9 +44,9 @@ When you have configured the remotes in your clone you can check out the heads o
   git branch -r
   # to see ALL the branches local/remote:
   git branch -v -a
-  # check out the head of a remote branch 
+  # check out the head of a remote branch
   git checkout <remote-name/branch-name>
-  # create a new branch that will originate 
+  # create a new branch that will originate
   git switch -c <new-branch> # note, when you push you will need to --set-origin
   # to create a new local branch that will TRACK already existing remote branch
   git switch -c <branch-name> <remote-name>/<branch-name>
