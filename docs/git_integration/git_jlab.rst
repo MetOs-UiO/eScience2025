@@ -124,4 +124,17 @@ To pull changes from the remote to your local repo use ``git pull``. To get upda
           gh auth status
 
     This login is only valid in the terminal you are in right now. 
-    If you switch terminal/restart your instance, you have to activate environment and login again.
+    If you switch terminal/restart your instance, you might have to activate environment and login again.
+
+    .. attention::
+
+        If git still asks for credentials, even if you did ``git auth login``:
+
+        .. code-block:: bash
+
+            git auth refresh
+            # will ask for yes. It will give you a OTP for github.
+            # got to https://github.com/login/device, 
+            # since we do not have the browser within jupyterlab
+            # login, enter OTP
+            git auth status
