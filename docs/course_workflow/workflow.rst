@@ -36,7 +36,7 @@ From `GitHub documentation <https://docs.github.com/en/enterprise-server@3.9/aut
 3. Setup git and clone on jupyterhub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas2.sigma2.no>`_. 
+After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas2.sigma2.no>`_.
 
 There, you would need to clone your fork and create your first branch you would be working on. See :doc:`Starting with git on the jupyterhub <../git_integration/git_jlab>`.
 
@@ -44,7 +44,7 @@ There, you would need to clone your fork and create your first branch you would 
   :class: toggle
 
 
-  If you have already accessed `test sever <https://test-escience2025.craas2.sigma2.no>`_, you should move to `<https://escience2025.craas2.sigma2.no>`_. 
+  If you have already accessed `test sever <https://test-escience2025.craas2.sigma2.no>`_, you should move to `<https://escience2025.craas2.sigma2.no>`_.
   Test server is only there for testing and will get shutdown.
 
 - :doc:`Open terminal <../common/terminal>`.
@@ -84,7 +84,7 @@ There, you would need to clone your fork and create your first branch you would 
     git push origin <sensible-branch-name>
 
 
-.. note:: 
+.. note::
     If you do not wish to type your token to authenticate every time you fetch/pull/push:
 
     .. code-block:: bash
@@ -96,8 +96,20 @@ There, you would need to clone your fork and create your first branch you would 
           # check if you are logged in
           gh auth status
 
-    This login is only valid in the terminal you are in right now. 
-    If you switch terminal/restart your instance, you have to activate environment and login again.
+    If you switch terminal/restart your instance, you might have to activate environment and login again.
+
+    .. attention::
+
+        If git still asks for credentials, even if you did ``git auth login``:
+
+        .. code-block:: bash
+
+            git auth refresh
+            # will ask for yes. It will give you a OTP for github.
+            # got to https://github.com/login/device,
+            # since we do not have the browser within jupyterlab
+            # login, enter OTP
+            git auth status
 
 
 4. Sharing your work within the group
