@@ -36,16 +36,18 @@ From `GitHub documentation <https://docs.github.com/en/enterprise-server@3.9/aut
 3. Setup git and clone on jupyterhub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas1.sigma2.no>`_.
+After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas2.sigma2.no>`_. 
+
 There, you would need to clone your fork and create your first branch you would be working on. See :doc:`Starting with git on the jupyterhub <../git_integration/git_jlab>`.
 
 .. attention::
   :class: toggle
 
-  If you have already accessed `test sever <https://escience2025-test.craas1.sigma2.no>`_, you should move to `<https://escience2025.craas1.sigma2.no>`_.
+
+  If you have already accessed `test sever <https://test-escience2025.craas2.sigma2.no>`_, you should move to `<https://escience2025.craas2.sigma2.no>`_. 
   Test server is only there for testing and will get shutdown.
 
-- Open terminal through Launcher.
+- :doc:`Open terminal <../common/terminal>`.
 - Type this commands filling in your **github** username and email (without ``<>``):
 
   .. code-block:: bash
@@ -66,6 +68,7 @@ There, you would need to clone your fork and create your first branch you would 
     cd eScience2025-projects
 
 - Add upstream repository (See :doc:`Setting up remotes <../git_integration/remotes>`):
+     - to check if it's already added do ``git remote -v``
 
   .. code-block:: bash
 
@@ -81,11 +84,26 @@ There, you would need to clone your fork and create your first branch you would 
     git push origin <sensible-branch-name>
 
 
+.. note:: 
+    If you do not wish to type your token to authenticate every time you fetch/pull/push:
+
+    .. code-block:: bash
+
+          # activate pangeo-notebook conda environment
+          source activate pangeo-notebook
+          # pipe your token into github login command
+          echo "<your-token-here>"  | gh auth login --with-token
+          # check if you are logged in
+          gh auth status
+
+    This login is only valid in the terminal you are in right now. 
+    If you switch terminal/restart your instance, you have to activate environment and login again.
+
 
 4. Sharing your work within the group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Within your fork, you should put all your code in your ``Group#`` folder.
+Within your fork, you should put all your code in your ``group#`` folder.
 
 When you need to share your work with the others within your group you need to make a :doc:`Pull Request <../git_integration/github-work>` to the `upstream repo <https://github.com/MetOs-UiO/eScience2025-projects>`_ ``main`` branch.
 
