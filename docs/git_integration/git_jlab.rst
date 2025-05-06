@@ -24,7 +24,7 @@ Using git GUI extension:
 .. |ppbuttons| image:: img/push-pull-gui.png
 
 Jupyterlab includes a GUI to make it easier to use git.
-You can see a git icon |gitico| on the left panel. To clone a repository, click on the icon and then on **Clone Reopsitory**. 
+You can see a git icon |gitico| on the left panel. To clone a repository, click on the icon and then on **Clone Reopsitory**.
 You should see the following prompt:
 
 .. image:: img/clone-repo.png
@@ -37,7 +37,7 @@ Check both boxes and press **Clone**. You will get the following prompt:
    :width: 300
    :alt: Credentials prompt GUI
 
-If you do not know what a personal access token is follow `official github instructions <https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_ to create one. Usually, the tokens start with ``ghp_***``. Treat this token as a password. 
+If you do not know what a personal access token is follow `official github instructions <https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_ to create one. Usually, the tokens start with ``ghp_***``. Treat this token as a password.
 Once you've logged in you will see in the file browser that a folder was created with the same name as the repo you have cloned.
 Go into that folder in the file browser and then click on the git tab |gitico| in the left panel. You will see the following:
 
@@ -111,7 +111,7 @@ Once you've made commits, you want to push them to the remote repository:
 
 To pull changes from the remote to your local repo use ``git pull``. To get updated history (branches, tags etc) from the remote use ``git fetch -a``.
 
-.. note:: 
+.. note::
     If you do not wish to type your token to authenticate every time you fetch/pull/push:
 
     .. code-block:: bash
@@ -123,7 +123,6 @@ To pull changes from the remote to your local repo use ``git pull``. To get upda
           # check if you are logged in
           gh auth status
 
-    This login is only valid in the terminal you are in right now. 
     If you switch terminal/restart your instance, you might have to activate environment and login again.
 
     .. attention::
@@ -134,7 +133,7 @@ To pull changes from the remote to your local repo use ``git pull``. To get upda
 
             git auth refresh
             # will ask for yes. It will give you a OTP for github.
-            # got to https://github.com/login/device, 
+            # got to https://github.com/login/device,
             # since we do not have the browser within jupyterlab
             # login, enter OTP
             git auth status
