@@ -15,7 +15,7 @@ To make a fork, go to the repo page. There you will see a ``fork`` button |fbutt
    :width: 700
    :alt: Fork Creation page
 
-2. Get GitGub Access token
+2. Get GitHub Access token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From `GitHub documentation <https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_.
@@ -36,13 +36,13 @@ From `GitHub documentation <https://docs.github.com/en/enterprise-server@3.9/aut
 3. Setup git and clone on jupyterhub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas1.sigma2.no>`_. 
+After you have forked the projects repo you should login to `Jupyterhub <https://escience2025.craas1.sigma2.no>`_.
 There, you would need to clone your fork and create your first branch you would be working on. See :doc:`Starting with git on the jupyterhub <../git_integration/git_jlab>`.
 
-.. attention:: 
+.. attention::
   :class: toggle
 
-  If you have already accessed `test sever <https://escience2025-test.craas1.sigma2.no>`_, you should move to `<https://escience2025.craas1.sigma2.no>`_. 
+  If you have already accessed `test sever <https://escience2025-test.craas1.sigma2.no>`_, you should move to `<https://escience2025.craas1.sigma2.no>`_.
   Test server is only there for testing and will get shutdown.
 
 - Open terminal through Launcher.

@@ -31,7 +31,8 @@ If you move your mouse on the other icon of this left sidebar, a short informati
 If you click on the "stop button" icon, you can see what is currently running on your server and you can click on
 "SHUT DOWN" to stop a running Python notebook or Terminal.
 
-### Start a new Terminal
+Start a new Terminal
+--------------------
 
 Similarly, you can start a new Terminal by clicking on "Terminal" in the Launcher.
 

@@ -1,7 +1,7 @@
 JupyterLab settings
 ~~~~~~~~~~~~~~~~~~~
 
-If you want to change some JupyterLab settings. You can o into **Settings** -\> **Settings Editor**.
+If you want to change some JupyterLab settings. You can go into **Settings** -\> **Settings Editor**.
 
 
 .. image:: img/sett-editor.png
