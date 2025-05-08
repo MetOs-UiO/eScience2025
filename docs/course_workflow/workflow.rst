@@ -29,7 +29,7 @@ From `GitHub documentation <https://docs.github.com/en/enterprise-server@3.9/aut
 - Click ``Generate new token (classic)``
 - Authenticate
 - Make a note
-- Click on ``repo``, ``user``
+- Click on ``repo``, ``user``, ``admin:org-read``
 - Click ``generate``
 - Save token somewhere, treat it as a password
 
