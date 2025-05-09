@@ -138,7 +138,7 @@ html_logo = "img/es-logo.png"
 html_favicon = "img/es-logo.ico"
 
 mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-mathjax_path = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
 suppress_warnings = ["myst.header","image.not_readable"]
 
 #def setup(app):
