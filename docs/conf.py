@@ -58,6 +58,7 @@ extensions = [
     "sphinx_toolbox.collapse",
     "sphinx_togglebutton",
     "sphinx_toolbox.installation",
+    "sphinxcontrib.pdfembed",
     "sphinx.ext.mathjax"
 ]
 
@@ -132,6 +133,8 @@ html_theme_options = {
 #    #'matplotlib': ('https://matplotlib.org/', None),
 #    'seaborn': ('https://seaborn.pydata.org/', None),
 # }
+
+html_static_path = ['_static']
 
 html_logo = "img/es-logo.png"
 
