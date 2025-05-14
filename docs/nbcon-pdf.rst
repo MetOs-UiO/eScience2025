@@ -138,4 +138,6 @@ If you run nbconvert on it (given the template file above and .bib file above ar
 
 The resulting pdf will look like this:
 
-:pdfembed:`src:_static/lat-mn.pdf, height:1000, width:700, align:middle`
+.. image:: img/lat-mn.png
+   :width: 700
+   :height: 1000
