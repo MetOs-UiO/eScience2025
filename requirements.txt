@@ -9,3 +9,4 @@ sphinx-autobuild
 watchfiles
 sphinx-toolbox
 sphinx-togglebutton
+sphinxcontrib-pdfembed @ git+https://github.com/SuperKogito/sphinxcontrib-pdfembed@master

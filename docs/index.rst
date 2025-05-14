@@ -11,5 +11,6 @@ eScience 2025 course
    git_integration/index
    common/index
    learning/index
+   nbcon-pdf
    contrib
    license
