@@ -127,13 +127,13 @@ To pull changes from the remote to your local repo use ``git pull``. To get upda
 
     .. attention::
 
-        If git still asks for credentials, even if you did ``git auth login``:
+        If gh still asks for credentials, even if you did ``gh auth login``:
 
         .. code-block:: bash
 
-            git auth refresh
+            gh auth refresh
             # will ask for yes. It will give you a OTP for github.
             # got to https://github.com/login/device,
             # since we do not have the browser within jupyterlab
             # login, enter OTP
-            git auth status
+            gh auth status

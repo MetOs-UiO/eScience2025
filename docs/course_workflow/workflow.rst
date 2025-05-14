@@ -100,16 +100,16 @@ There, you would need to clone your fork and create your first branch you would 
 
     .. attention::
 
-        If git still asks for credentials, even if you did ``git auth login``:
+        If github still asks for credentials, even if you did ``gh auth login``:
 
         .. code-block:: bash
 
-            git auth refresh
+            gh auth refresh
             # will ask for yes. It will give you a OTP for github.
             # got to https://github.com/login/device,
             # since we do not have the browser within jupyterlab
             # login, enter OTP
-            git auth status
+            gh auth status
 
 
 4. Sharing your work within the group
