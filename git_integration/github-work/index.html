@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pull requests and Issues &#8212; eScience-2025  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-toolbox.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_toolbox_installation.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/sphinx_toolbox_installation.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'git_integration/github-work';</script>
+    <link rel="icon" href="../../_static/es-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Resolving merge/rebase conflicts" href="../conflicts/" />
+    <link rel="prev" title="Setting up remotes" href="../remotes/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/es-logo.png" class="logo__image only-light" alt="eScience-2025  documentation - Home"/>
+    <script>document.write(`<img src="../../_static/es-logo.png" class="logo__image only-dark" alt="eScience-2025  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../">
+                    eScience 2025 course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../feide/">Jupyterhub access</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course_workflow/">Workflow for eScience2025 course</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/workflow/">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/rules/">Basic Rules for the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/data/">Sharing data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../basics/">Jupyterhub basic usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/start_stop/">Starting and stopping your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/lab/">The JupyterLab Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/kernels/">Using different kernels in notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/settings/">JupyterLab settings</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../data/">Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data/Intake-data-acess/">Acessing model data using intake-esm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/local-data/">Local shared data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/ACTRIS-data/">ACTRIS data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../">Using version control on Jupyterhub:</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../git_jlab/">Starting with git on the jupyterhub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../remotes/">Setting up remotes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pull requests and Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conflicts/">Resolving merge/rebase conflicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../common/">General tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../common/terminal/">Using command terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common/resources/">Monitoring resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common/debug/">Using debugger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../learning/">Learning Corner</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/us-links/">Useful links</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../learning/notebooks/">Example Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/basic_python/">Python tips &amp; tricks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/01_some-xarray-pandas-presentation_Sara/">Some tips with xarray and pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/02_making_a_nice_table_for_michael/">Making a nice table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/03_dask_intro/">Brief introduction to Dask</a></li>
+
+
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/04_own-modules/">Making your own modules and some numba tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/05_markdown_example/">How to use Markdown in Jupyter notebook</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/netcdf/">Reading files and regridding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/01_interpolate_hybridsigma2pressure_coords/">Interpolate hybrid sigma pressure coordinates to pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/02_xesmf_regridding/">Regridding model data with xESMF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/03_masked_and_weighted_average/">Using masks and computing weighted average</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/04_mask_land/">Mask land</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/05_projections/">Using cartopy and projections for plotting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/read_data/">Specific examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/01_from_ebas_using_xarray/">Using xarray to read EBAS data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/02_read_PPE/">Read CMIP-PPE data and emulate with Gaussian Processor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/03_salsa_intro/">ECHAM-SALSA Aerosol Data Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nbcon-pdf/">Exporting notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/">Contribute to this page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license/">Credit</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/edit/master/docs/git_integration/github-work.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/issues/new?title=Issue%20on%20page%20%2Fgit_integration/github-work.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/git_integration/github-work.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pull requests and Issues</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pull-requests-and-issues">
+<h1>Pull requests and Issues<a class="headerlink" href="#pull-requests-and-issues" title="Link to this heading">#</a></h1>
+<section id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Link to this heading">#</a></h2>
+<p>Let’s say you have found a bug in the code or want to request propose some new functionality for a code that is in some repo on GitHub.
+A good way to do it is to use Issues to keep the track record.</p>
+<p>On the GitHub web-page associated with the repo, you can find an Issues tab.</p>
+<a class="reference internal image-reference" href="../../_images/issues-tab.png"><img alt="Issues" src="../../_images/issues-tab.png" style="width: 800px;" />
+</a>
+<p>There, you will see opened and closed issues, search through them, sort etc. To create a new Issue simply click on <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Issue</span></code> on the right.</p>
+<a class="reference internal image-reference" href="../../_images/new-issue.png"><img alt="New Issue" src="../../_images/new-issue.png" style="width: 800px;" />
+</a>
+<p>GitHub uses MarkDown with some extra features for formatting comments and messages ont GitHub web-pages.
+You can read about the basics of formatting on the <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">github documentation</a>.</p>
+</section>
+<section id="pull-requests">
+<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
+<p>When you have developed some code and want other people to use it. For that, you will need to create a Pull Request so that change from your fork get merged into a default branch on upstream.
+There is a Pull Requests tab near the Issues tab on the GitHub page of your repository. If you click on it, you will get similar page as the one for Issues:</p>
+<a class="reference internal image-reference" href="../../_images/pr-tab.png"><img alt="Pull Requests" src="../../_images/pr-tab.png" style="width: 800px;" />
+</a>
+<p>If your fork had recent commits pushed, github will add a hightlight on the repo page. You can also just click on the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Pull</span> <span class="pre">Request</span></code>. Whichever you do, you will see a promt to choose which branch you are pushing from and which you are pulling into:</p>
+<a class="reference internal image-reference" href="../../_images/new-pr.png"><img alt="Pull Requests" src="../../_images/new-pr.png" style="width: 800px;" />
+</a>
+<p><code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">repository</span></code> and <code class="docutils literal notranslate"><span class="pre">base</span></code> correspond to the repo and branch you want your changes to <strong>go in</strong>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">repository</span></code> and <code class="docutils literal notranslate"><span class="pre">compare</span></code> correspond to the repo and branch you want changes <strong>from</strong>.</p>
+<div class="toggle admonition attention">
+<p class="admonition-title">Attention</p>
+<p>When submitting a Pull Request, double check that you are pulling the intended branch into intended remote.</p>
+</div>
+<p>After you have chosen correct branches, you will see the comparison between them if you scroll down.
+To create a Pull Request click on <strong>Create pull request</strong>. Now you will se a page similar to the one you get when creating a new issue.</p>
+<a class="reference internal image-reference" href="../../_images/new-pr-cont.png"><img alt="Pull Requests" src="../../_images/new-pr-cont.png" style="width: 800px;" />
+</a>
+<p>Ideally the branch you are pushing from should have no merge conflicts with the base branch. Also, do not untoggle the <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">edits</span> <span class="pre">by</span> <span class="pre">maintainers</span></code> since that will prohibit people to fix your PR if something is wrong with it.</p>
+<p>Give your PR a meaningful title and description and check <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">edits</span> <span class="pre">by</span> <span class="pre">maintainers</span></code> if you want people responsible for the repo your are pulling into to have access to your branch associated with the PR.</p>
+<p>You can also request specific maintainers/users to review you PR (on the right). After you are done, press <strong>Create pull request</strong> again.</p>
+<a class="reference internal image-reference" href="../../_images/new-pr-cont-1.png"><img alt="Pull Requests" src="../../_images/new-pr-cont-1.png" style="width: 800px;" />
+</a>
+<p>On the opened PR page you will be able to see all the commits that are different between the base and compare branches, You can also check the differences in files between the two versions. If there are merge confilts in your PR, make a comment and mention <code class="docutils literal notranslate"><span class="pre">&#64;github-username</span></code> a maintainer to help.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../remotes/"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Setting up remotes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../conflicts/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Resolving merge/rebase conflicts</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MetOs-UiO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, MetOs, UiO.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

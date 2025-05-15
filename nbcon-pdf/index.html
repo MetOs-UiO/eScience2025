@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exporting notebooks &#8212; eScience-2025  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-toolbox.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_toolbox_installation.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/sphinx_toolbox_installation.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nbcon-pdf';</script>
+    <link rel="icon" href="../_static/es-logo.ico"/>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Contribute to this page" href="../contrib/" />
+    <link rel="prev" title="ECHAM-SALSA Aerosol Data Introduction" href="../learning/notebooks/read_data/03_salsa_intro/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/es-logo.png" class="logo__image only-light" alt="eScience-2025  documentation - Home"/>
+    <script>document.write(`<img src="../_static/es-logo.png" class="logo__image only-dark" alt="eScience-2025  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../">
+                    eScience 2025 course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../feide/">Jupyterhub access</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course_workflow/">Workflow for eScience2025 course</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../course_workflow/workflow/">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course_workflow/rules/">Basic Rules for the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course_workflow/data/">Sharing data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/">Jupyterhub basic usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/start_stop/">Starting and stopping your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/lab/">The JupyterLab Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/kernels/">Using different kernels in notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/settings/">JupyterLab settings</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/">Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/Intake-data-acess/">Acessing model data using intake-esm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/local-data/">Local shared data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/ACTRIS-data/">ACTRIS data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git_integration/">Using version control on Jupyterhub:</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git_integration/git_jlab/">Starting with git on the jupyterhub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git_integration/remotes/">Setting up remotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git_integration/github-work/">Pull requests and Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git_integration/conflicts/">Resolving merge/rebase conflicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../common/">General tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common/terminal/">Using command terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/resources/">Monitoring resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/debug/">Using debugger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learning/">Learning Corner</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/us-links/">Useful links</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../learning/notebooks/">Example Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../learning/notebooks/basic_python/">Python tips &amp; tricks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/basic_python/01_some-xarray-pandas-presentation_Sara/">Some tips with xarray and pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/basic_python/02_making_a_nice_table_for_michael/">Making a nice table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/basic_python/03_dask_intro/">Brief introduction to Dask</a></li>
+
+
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/basic_python/04_own-modules/">Making your own modules and some numba tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/basic_python/05_markdown_example/">How to use Markdown in Jupyter notebook</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../learning/notebooks/netcdf/">Reading files and regridding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/netcdf/01_interpolate_hybridsigma2pressure_coords/">Interpolate hybrid sigma pressure coordinates to pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/netcdf/02_xesmf_regridding/">Regridding model data with xESMF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/netcdf/03_masked_and_weighted_average/">Using masks and computing weighted average</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/netcdf/04_mask_land/">Mask land</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/netcdf/05_projections/">Using cartopy and projections for plotting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../learning/notebooks/read_data/">Specific examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/read_data/01_from_ebas_using_xarray/">Using xarray to read EBAS data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/read_data/02_read_PPE/">Read CMIP-PPE data and emulate with Gaussian Processor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../learning/notebooks/read_data/03_salsa_intro/">ECHAM-SALSA Aerosol Data Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exporting notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contrib/">Contribute to this page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/edit/master/docs/nbcon-pdf.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/issues/new?title=Issue%20on%20page%20%2Fnbcon-pdf.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/nbcon-pdf.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exporting notebooks</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citiations-in-notebooks">Citiations in notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-rendering-your-notebook-in-html">For rendering your notebook in HTML:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-in-pdf-through-latex">Citation in pdf through LaTeX:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exporting-notebooks">
+<h1>Exporting notebooks<a class="headerlink" href="#exporting-notebooks" title="Link to this heading">#</a></h1>
+<p>You can export your notebooks as an html file or as a pdf, processed through LaTeX.</p>
+<p>You can do it through jupyterlab GUI, however, this method will only apply default rendering templates.</p>
+<a class="reference internal image-reference" href="../_images/exp-gui-html.png"><img alt="../_images/exp-gui-html.png" src="../_images/exp-gui-html.png" style="width: 50%;" />
+</a>
+<p>A better way to export your notebook is to use CLI:
+.. code-block::bash</p>
+<blockquote>
+<div><p># convert to html:
+jupyter nbconvert notebook.ipynb –to html
+#convert to pdf through latex
+jupyter nbconvert notebook.ipynb –to pdf</p>
+</div></blockquote>
+<p>When converting, you can specify a template for rendering with <code class="docutils literal notranslate"><span class="pre">--template-file</span> <span class="pre">&lt;file&gt;</span></code>.
+You can look up other options with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">nbconvert</span> <span class="pre">--help</span></code></p>
+<section id="citiations-in-notebooks">
+<h2>Citiations in notebooks<a class="headerlink" href="#citiations-in-notebooks" title="Link to this heading">#</a></h2>
+<section id="for-rendering-your-notebook-in-html">
+<h3>For rendering your notebook in HTML:<a class="headerlink" href="#for-rendering-your-notebook-in-html" title="Link to this heading">#</a></h3>
+<p>If you wish to do citations in your notebook, there are multiple ways to do it. If you don’t want to do a bibliography, you can just use markdown syntax to hyperlink to a valid URL.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="ge">_(Duran et al., 2024)_</span>](https://acp.copernicus.org/articles/25/2123/2025/)
+</pre></div>
+</div>
+<p>Or instead, you can use <code class="docutils literal notranslate"><span class="pre">&lt;cite&gt;&lt;/cite&gt;</span></code> tag in html:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://acp.copernicus.org/articles/25/2123/2025/&quot;</span><span class="p">&gt;</span>(Duran et al., 2024)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Note, that the <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;&lt;/a&gt;</span></code> html-tag is an anchor, it does not have to be hyperlinked to a url. It can be some <code class="docutils literal notranslate"><span class="pre">id</span></code> within the notebook.
+For example, We have a markdown cell with bibliography:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">#### Bibliography</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;duran24&quot;</span><span class="p">&gt;</span>
+  Duran, B. M., Wall, C. J., Lutsko, N. J., Michibata, T., Ma, P.-L., Qin, Y., Duffy, M. L., Medeiros, B., <span class="ni">&amp;38;</span> Debolskiy, M. (2025).
+  A new method for diagnosing effective radiative forcing from aerosol–cloud interactions in climate models.
+  <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Atmospheric Chemistry and Physics<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>25<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>(4), 2123–2146.
+  doi:<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://doi.org/10.5194/acp-25-2123-2025&quot;</span><span class="p">&gt;</span>10.5194/acp-25-2123-2025<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>In this cell we have <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=...&gt;&lt;/&gt;</span></code> since href here is a https link, when the cell is rendered, if you click on the text within &lt;a&gt;&lt;/a&gt;, a new browser tab will open with that page.</p>
+<p>Since &lt;p&gt;&lt;/p&gt; in the example above has attribute <code class="docutils literal notranslate"><span class="pre">id=duran24</span></code>, we can reference it in another notebook cell, like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>... as was shown by <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#duran24&quot;</span><span class="p">&gt;</span>Duran et al., 2024<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span> ...
+</pre></div>
+</div>
+<p>Now, this <code class="docutils literal notranslate"><span class="pre">Duran</span> <span class="pre">et</span> <span class="pre">al.,</span> <span class="pre">2024</span></code> will be highlited and if you click on it, it will move your view to the cell with bibliogrpahy at the paragraph with <code class="docutils literal notranslate"><span class="pre">id=duran2024</span></code>.</p>
+<p>Another way to  make citations and bibliography is to use <a class="reference external" href="https://github.com/krassowski/jupyterlab-citation-manager">jupyterlab-citation-manager</a>, however, since it uses some outdated libraries, it is not installed by default. To enable it, go into extensions tab on the left, accept warning and type the name of the extension and click on <code class="docutils literal notranslate"><span class="pre">install</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/jlab-cm-ext.png"><img alt="../_images/jlab-cm-ext.png" src="../_images/jlab-cm-ext.png" style="width: 300px;" />
+</a>
+<p>Then, the lab will ask you to refresh the page. The extension then will request a personal token from zotero. <a class="reference external" href="https://github.com/krassowski/jupyterlab-citation-manager/blob/main/README.md">Follow the instructions in readme</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The extensions are uninstall every time you restart your server. So you need to re-install them again.</p>
+</div>
+</section>
+<section id="citation-in-pdf-through-latex">
+<h3>Citation in pdf through LaTeX:<a class="headerlink" href="#citation-in-pdf-through-latex" title="Link to this heading">#</a></h3>
+<p>If you wish to convert your notebook to pdf, and manage your bibliography with bibtex, you will need to create a custom jinja template file adn a bibtex <cite>.bib`</cite> file.</p>
+<p>For example, make a file <code class="docutils literal notranslate"><span class="pre">my_template.tex.j2</span></code> with contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="o">*-</span> <span class="n">extends</span> <span class="s1">&#39;style_jupyter.tex.j2&#39;</span> <span class="o">-*</span><span class="p">))</span>
+<span class="p">((</span><span class="o">*</span> <span class="n">block</span> <span class="n">author</span> <span class="o">*</span><span class="p">))</span>
+\<span class="n">author</span><span class="p">{</span><span class="n">eScience</span> <span class="mi">2025</span><span class="p">}</span>
+<span class="p">((</span><span class="o">*</span> <span class="n">endblock</span> <span class="n">author</span> <span class="o">*</span><span class="p">))</span>
+<span class="p">((</span><span class="o">*</span> <span class="n">block</span> <span class="n">title</span> <span class="o">*</span><span class="p">))</span>
+\<span class="n">title</span><span class="p">{</span><span class="n">My</span> <span class="n">awesome</span> <span class="n">notebook</span><span class="p">}</span>
+<span class="p">((</span><span class="o">*</span> <span class="n">endblock</span> <span class="n">title</span> <span class="o">*</span><span class="p">))</span>
+
+<span class="p">((</span><span class="o">*</span> <span class="n">block</span> <span class="n">bibliography</span> <span class="o">*</span><span class="p">))</span>
+\<span class="n">bibliographystyle</span><span class="p">{</span><span class="n">apalike</span><span class="p">}</span>
+\<span class="n">bibliography</span><span class="p">{</span><span class="n">biblio</span><span class="p">}</span>
+<span class="p">((</span><span class="o">*</span> <span class="n">endblock</span> <span class="n">bibliography</span> <span class="o">*</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You can see, that <code class="docutils literal notranslate"><span class="pre">\bibliography</span></code> command is pointing to <code class="docutils literal notranslate"><span class="pre">biblio.bib</span></code> file, f.e.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">duran24</span><span class="p">,</span>
+<span class="n">AUTHOR</span> <span class="o">=</span> <span class="p">{</span><span class="n">Duran</span><span class="p">,</span> <span class="n">B</span><span class="o">.</span> <span class="n">M</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Wall</span><span class="p">,</span> <span class="n">C</span><span class="o">.</span> <span class="n">J</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Lutsko</span><span class="p">,</span> <span class="n">N</span><span class="o">.</span> <span class="n">J</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Michibata</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Ma</span><span class="p">,</span> <span class="n">P</span><span class="o">.-</span><span class="n">L</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Qin</span><span class="p">,</span> <span class="n">Y</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Duffy</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span> <span class="n">L</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Medeiros</span><span class="p">,</span> <span class="n">B</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Debolskiy</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span><span class="p">},</span>
+<span class="n">TITLE</span> <span class="o">=</span> <span class="p">{</span><span class="n">A</span> <span class="n">new</span> <span class="n">method</span> <span class="k">for</span> <span class="n">diagnosing</span> <span class="n">effective</span> <span class="n">radiative</span> <span class="n">forcing</span> <span class="kn">from</span><span class="w"> </span><span class="nn">aerosol</span><span class="o">--</span><span class="n">cloud</span> <span class="n">interactions</span> <span class="ow">in</span> <span class="n">climate</span> <span class="n">models</span><span class="p">},</span>
+<span class="n">JOURNAL</span> <span class="o">=</span> <span class="p">{</span><span class="n">Atmospheric</span> <span class="n">Chemistry</span> <span class="ow">and</span> <span class="n">Physics</span><span class="p">},</span>
+<span class="n">VOLUME</span> <span class="o">=</span> <span class="p">{</span><span class="mi">25</span><span class="p">},</span>
+<span class="n">YEAR</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2025</span><span class="p">},</span>
+<span class="n">NUMBER</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">},</span>
+<span class="n">PAGES</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2123</span><span class="o">--</span><span class="mi">2146</span><span class="p">},</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">acp</span><span class="o">.</span><span class="n">copernicus</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">articles</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2123</span><span class="o">/</span><span class="mi">2025</span><span class="o">/</span><span class="p">},</span>
+<span class="n">DOI</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.5194</span><span class="o">/</span><span class="n">acp</span><span class="o">-</span><span class="mi">25</span><span class="o">-</span><span class="mi">2123</span><span class="o">-</span><span class="mi">2025</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To cite an entry from <code class="docutils literal notranslate"><span class="pre">biblio.bib</span></code> in your notebook use the following: <code class="docutils literal notranslate"><span class="pre">&lt;cite</span> <span class="pre">data-cite=&quot;duran24&quot;&gt;&lt;/cite&gt;</span></code>. This will not render in your cell (since the body is empty), the citation will apear after rendering the notebook.</p>
+<p>Assume notebook <code class="docutils literal notranslate"><span class="pre">my-notebook.ipynb</span></code> with just one markdown cell:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>This is a citation  &lt;cite data-cite=&quot;duran24&quot;&gt;&lt;/cite&gt;.
+</pre></div>
+</div>
+<p>And one code cell:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is some code&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run nbconvert on it (given the template file above and .bib file above are in the same directory as your notebook):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>my-notebook.ipynb<span class="w"> </span>--to<span class="w"> </span>pdf<span class="w"> </span>--template-file<span class="w"> </span>template.tex.j2
+</pre></div>
+</div>
+<p>The resulting pdf will look like this:</p>
+<a class="reference internal image-reference" href="../_images/lat-mn.png"><img alt="../_images/lat-mn.png" src="../_images/lat-mn.png" style="width: 700px; height: 1000px;" />
+</a>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../learning/notebooks/read_data/03_salsa_intro/"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ECHAM-SALSA Aerosol Data Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../contrib/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contribute to this page</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citiations-in-notebooks">Citiations in notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-rendering-your-notebook-in-html">For rendering your notebook in HTML:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-in-pdf-through-latex">Citation in pdf through LaTeX:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MetOs-UiO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, MetOs, UiO.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

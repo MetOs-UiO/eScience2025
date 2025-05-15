@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Starting with git on the jupyterhub &#8212; eScience-2025  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-toolbox.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_toolbox_installation.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/sphinx_toolbox_installation.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'git_integration/git_jlab';</script>
+    <link rel="icon" href="../../_static/es-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Setting up remotes" href="../remotes/" />
+    <link rel="prev" title="Using version control on Jupyterhub:" href="../" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/es-logo.png" class="logo__image only-light" alt="eScience-2025  documentation - Home"/>
+    <script>document.write(`<img src="../../_static/es-logo.png" class="logo__image only-dark" alt="eScience-2025  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../">
+                    eScience 2025 course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../feide/">Jupyterhub access</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course_workflow/">Workflow for eScience2025 course</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/workflow/">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/rules/">Basic Rules for the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course_workflow/data/">Sharing data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../basics/">Jupyterhub basic usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/start_stop/">Starting and stopping your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/lab/">The JupyterLab Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/kernels/">Using different kernels in notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basics/settings/">JupyterLab settings</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../data/">Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data/Intake-data-acess/">Acessing model data using intake-esm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/local-data/">Local shared data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/ACTRIS-data/">ACTRIS data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../">Using version control on Jupyterhub:</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Starting with git on the jupyterhub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../remotes/">Setting up remotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../github-work/">Pull requests and Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conflicts/">Resolving merge/rebase conflicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../common/">General tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../common/terminal/">Using command terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common/resources/">Monitoring resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common/debug/">Using debugger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../learning/">Learning Corner</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/us-links/">Useful links</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../learning/notebooks/">Example Notebooks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/basic_python/">Python tips &amp; tricks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/01_some-xarray-pandas-presentation_Sara/">Some tips with xarray and pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/02_making_a_nice_table_for_michael/">Making a nice table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/03_dask_intro/">Brief introduction to Dask</a></li>
+
+
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/04_own-modules/">Making your own modules and some numba tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/basic_python/05_markdown_example/">How to use Markdown in Jupyter notebook</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/netcdf/">Reading files and regridding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/01_interpolate_hybridsigma2pressure_coords/">Interpolate hybrid sigma pressure coordinates to pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/02_xesmf_regridding/">Regridding model data with xESMF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/03_masked_and_weighted_average/">Using masks and computing weighted average</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/04_mask_land/">Mask land</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/netcdf/05_projections/">Using cartopy and projections for plotting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../learning/notebooks/read_data/">Specific examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/01_from_ebas_using_xarray/">Using xarray to read EBAS data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/02_read_PPE/">Read CMIP-PPE data and emulate with Gaussian Processor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../learning/notebooks/read_data/03_salsa_intro/">ECHAM-SALSA Aerosol Data Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nbcon-pdf/">Exporting notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/">Contribute to this page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license/">Credit</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/edit/master/docs/git_integration/git_jlab.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MetOs-UiO/eScience2025/issues/new?title=Issue%20on%20page%20%2Fgit_integration/git_jlab.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/git_integration/git_jlab.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Starting with git on the jupyterhub</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-your-git-username-and-email">Adding your git username and email</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-gui-extension">Using git GUI extension:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-cli">Using git CLI</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="starting-with-git-on-the-jupyterhub">
+<h1>Starting with git on the jupyterhub<a class="headerlink" href="#starting-with-git-on-the-jupyterhub" title="Link to this heading">#</a></h1>
+<section id="adding-your-git-username-and-email">
+<h2>Adding your git username and email<a class="headerlink" href="#adding-your-git-username-and-email" title="Link to this heading">#</a></h2>
+<p>First thing that you would want to do is to add your github username and email to the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code>.
+To do that, open a terminal (f.e. through launcher) and do:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;&lt;your_username&gt;&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;&lt;your_email&gt;&quot;</span>
+</pre></div>
+</div>
+<p>You can check if the config is added by doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--get</span> <span class="pre">user.name</span></code>.</p>
+</section>
+<section id="using-git-gui-extension">
+<h2>Using git GUI extension:<a class="headerlink" href="#using-git-gui-extension" title="Link to this heading">#</a></h2>
+<p>Jupyterlab includes a GUI to make it easier to use git.
+You can see a git icon <img alt="gitico" src="../../_images/git_ico.png" /> on the left panel. To clone a repository, click on the icon and then on <strong>Clone Reopsitory</strong>.
+You should see the following prompt:</p>
+<a class="reference internal image-reference" href="../../_images/clone-repo.png"><img alt="Cloning repo GUI" src="../../_images/clone-repo.png" style="width: 800px;" />
+</a>
+<p>Check both boxes and press <strong>Clone</strong>. You will get the following prompt:</p>
+<a class="reference internal image-reference" href="../../_images/gui-credentials.png"><img alt="Credentials prompt GUI" src="../../_images/gui-credentials.png" style="width: 300px;" />
+</a>
+<p>If you do not know what a personal access token is follow <a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">official github instructions</a> to create one. Usually, the tokens start with <code class="docutils literal notranslate"><span class="pre">ghp_***</span></code>. Treat this token as a password.
+Once you’ve logged in you will see in the file browser that a folder was created with the same name as the repo you have cloned.
+Go into that folder in the file browser and then click on the git tab <img alt="gitico" src="../../_images/git_ico.png" /> in the left panel. You will see the following:</p>
+<a class="reference internal image-reference" href="../../_images/repo-tab.png"><img alt="Repo tab GUI" src="../../_images/repo-tab.png" style="width: 200px;" />
+</a>
+<p>You can hover over different tabs and buttons too see what they do.
+If you click on <strong>History</strong> tab, you will see the beautiful graph of the commit-history of the branch you are currently on.
+You can clone multiple repositories and if you are in some repo folder within your file browser you can always click on the git icon to use version control for that specific repository.</p>
+<p>Pulling and pushing and fetching are done using the cloud buttons <img alt="ppbuttons" src="../../_images/push-pull-gui.png" /> at the top right of the panel.</p>
+</section>
+<section id="using-git-cli">
+<h2>Using git CLI<a class="headerlink" href="#using-git-cli" title="Link to this heading">#</a></h2>
+<p>You can also use git within the command line.
+To do that, Open a terminal through the <strong>Launcher</strong>. That will open the terminal at your current directory.
+To see the absolute path of where are you at use <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. Now, we will clone a repository that we use for the course (assuming you made a fork of it).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository<span class="w"> </span>url&gt;<span class="w"> </span>&lt;folder&gt;
+
+<span class="nb">cd</span><span class="w"> </span>&lt;folder&gt;
+</pre></div>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">folder</span></code> is not provided, the repository will be cloned into a folder with the same name as a repository.
+Since we are using private repositories, you will get promoted to authenticate. Use your github username and <a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">token</a>.</p>
+<p>Once you are in the repo folder. You can create a new branch for a feature/piece of work you will be working on, so you can make a pull request to the upstream repo later.
+To see what branch are you on right now and any changes you have made use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>my-new-branch
+
+git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>You will see that you just created a new branch and that you are up-to-date with it. Note, this branch is local and does not exist yet on github repo.</p>
+<p>Now, suppose you made some changes to a file <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>. You want to commit the changes and than push it to the remote (your repo on git hub). To commit your changes, you can add a single file, multiple files or all the changes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#this will stage a single file</span>
+git<span class="w"> </span>add<span class="w"> </span>file.txt
+<span class="c1">#this will stage multiple files</span>
+git<span class="w"> </span>add<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>...
+</pre></div>
+</div>
+<p>To commit the files you have staged:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;commit-message, changed file.txt&quot;</span>
+</pre></div>
+</div>
+<p>You can commit all the changes at once:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;changed bunch of stuff&quot;</span>
+</pre></div>
+</div>
+<p>Once you’ve made commits, you want to push them to the remote repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#--set-upstream origin my-new-branch is only needed once</span>
+<span class="c1"># for every newly created branch to push it along with commits.</span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>my-new-branch
+<span class="c1"># after that you can just simply do:</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>To pull changes from the remote to your local repo use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>. To get updated history (branches, tags etc) from the remote use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">-a</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not wish to type your token to authenticate every time you fetch/pull/push:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># activate pangeo-notebook conda environment</span>
+<span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>pangeo-notebook
+<span class="c1"># pipe your token into github login command</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&lt;your-token-here&gt;&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>gh<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>--with-token
+<span class="c1"># check if you are logged in</span>
+gh<span class="w"> </span>auth<span class="w"> </span>status
+</pre></div>
+</div>
+<p>If you switch terminal/restart your instance, you might have to activate environment and login again.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If gh still asks for credentials, even if you did <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">auth</span> <span class="pre">login</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>auth<span class="w"> </span>refresh
+<span class="c1"># will ask for yes. It will give you a OTP for github.</span>
+<span class="c1"># got to https://github.com/login/device,</span>
+<span class="c1"># since we do not have the browser within jupyterlab</span>
+<span class="c1"># login, enter OTP</span>
+gh<span class="w"> </span>auth<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Using version control on Jupyterhub:</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../remotes/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Setting up remotes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-your-git-username-and-email">Adding your git username and email</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-gui-extension">Using git GUI extension:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-cli">Using git CLI</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MetOs-UiO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, MetOs, UiO.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
