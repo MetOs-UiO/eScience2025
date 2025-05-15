@@ -2,7 +2,7 @@ eScience 2025 course
 =========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    feide
    course_workflow/index

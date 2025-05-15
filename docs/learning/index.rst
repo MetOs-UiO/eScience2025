@@ -5,11 +5,10 @@ To add a new example, add a jupyter notebook in :code:`learning/notebooks`. The 
 it to the toctree.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
    :caption: Notebook Examples
    :glob:
 
    us-links
-   notebooks/*
-
+   notebooks/index
