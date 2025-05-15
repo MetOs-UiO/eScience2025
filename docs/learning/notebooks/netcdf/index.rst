@@ -1,4 +1,4 @@
-Reading files and regriding
+Reading files and regridding
 ===========================
 
 .. toctree::
